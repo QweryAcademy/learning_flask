@@ -1,0 +1,22 @@
+form.tsf{
+        margin-top: 3em;
+}
+
+form.tsf input[name="site"]{
+    width: 40%;
+    height: 35px;
+    font-size: 20px;
+}
+
+.parent-container{
+    margin: 4em 7em 0 7em;
+}
+.search-result{
+    width: 60%;
+    display: inline-block;
+}
+.right-content{
+    width: 39%;
+    display: inline-block;
+    vertical-align: top;
+}

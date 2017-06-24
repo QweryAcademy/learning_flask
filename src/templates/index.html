@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{{url_for("static",filename="style.css")}}">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+            <div class="alert alert-{{category}} alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> {{message}}</div>
+        {% endfor %}
+        
+    {% endif %}
+    {% endwith %}
+    {% block body %}
+    <span class="ctr-p" id="body">
+        <center>
+            <div style="height:233px;margin-top:89px" id="lga">
+                <div style="padding-top:109px">
+                    
+                    <div style="background-size:272px 92px;height:92px;width:272px" title="Google" align="left" id="hplogo" onload="window.lol&amp;&amp;lol()">
+                        <img src="{{url_for("static",filename="google-logo.PNG")}}" alt="Google Logo"/>
+                    </div>
+                    
+            <form class="tsf" action="/search" style="overflow:visible" id="tsf" method="GET" name="f" onsubmit="return q.value!=''" role="search">
+                <div data-jibp="" data-jiis="uc" id="tophf">
+                    <input name="site" value="" type="text" />
+                </div>
+            </form>
+                </div>
+            </div>
+            <div style="height:118px">
+            </div>
+            <div data-jibp="h" data-jiis="uc" id="prm-pt" style="margin-top:12px">
+                <style>#als{font-size:small;margin-bottom:24px}#_eEe{display:inline-block;line-height:28px;}#_eEe a{padding:0 3px;}._lEe{display:inline-block;margin:0 2px;white-space:nowrap}._PEe{display:inline-block;margin:0 2px}</style><script>window.gbar && gbar.up && gbar.up.tp && gbar.up.tp();</script>
+                <div id="als"><div id="_eEe">Google.com.ng offered in: 
+                    <a href="https://www.google.com.ng/setprefs?sig=0_h5BEgDnE3e6V8Ov14IKnPRw0h1A%3D&amp;hl=ha&amp;source=homepage" onmousedown="return rwt(this,'','','','','AFQjCNERR6NtmEIJkXDtrmKwM46Uv8jyOg','yPycKjOPqkuAxTIslPLrlQ','0ahUKEwid_6yRj4TUAhUCkSwKHaq0A-YQ2ZgBCAw','','',event)">Hausa</a> 
+                     <a href="https://www.google.com.ng/setprefs?sig=0_h5BEgDnE3e6V8Ov14IKnPRw0h1A%3D&amp;hl=ig&amp;source=homepage" onmousedown="return rwt(this,'','','','','AFQjCNHt_OKej7EPaGSoP4dsGq6ggxx1Ag','MfMSbnD9c1nr0IRRvlUQJg','0ahUKEwid_6yRj4TUAhUCkSwKHaq0A-YQ2ZgBCA0','','',event)">Igbo</a> 
+                      <a href="https://www.google.com.ng/setprefs?sig=0_h5BEgDnE3e6V8Ov14IKnPRw0h1A%3D&amp;hl=yo&amp;source=homepage" onmousedown="return rwt(this,'','','','','AFQjCNH92NSrmBEKb7vpo9LlFxLhri2t7Q','G1vdRfuuiTrovqn-WnjTIw','0ahUKEwid_6yRj4TUAhUCkSwKHaq0A-YQ2ZgBCA4','','',event)">Èdè Yorùbá</a> 
+                       <a href="https://www.google.com.ng/setprefs?sig=0_h5BEgDnE3e6V8Ov14IKnPRw0h1A%3D&amp;hl=pcm&amp;source=homepage" onmousedown="return rwt(this,'','','','','AFQjCNEbClkRAjxShsobI4XNpXwZC4HrYQ','jA61TGFzFWfcyHaDrMJS7A','0ahUKEwid_6yRj4TUAhUCkSwKHaq0A-YQ2ZgBCA8','','',event)">Pidgin</a> 
+                       </div>
+                    </div>
+                <div id="swml"></div>
+            </div>
+    </center>
+    </span> 
+    {% endblock body %}
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+
+</html>

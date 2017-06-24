@@ -1,0 +1,26 @@
+{% extends "index.html" %} {% block body %}
+<div class="container">
+    <div class="row">
+        <form style="margin-top: 7em;" class="col-md-6 col-md-offset-3" method="post"
+            action="{{url_for("add_content")}}">
+            {{form.csrf_token}}
+            <div class="form-group">
+                {{form.title.label(for="exampleTitle")}}
+                {{form.title(class_="form-control", id="exampleTitle",placeholder="Title")}}
+            </div>
+            <div class="form-group">
+                {{form.url.label(for="exampleUrl")}}
+                {{form.url(class_="form-control",id="exampleUrl",placeholder="This links to the search item")}}
+
+            </div>
+            <div class="form-group">
+                {{form.content.label(for="exampleContent")}}
+                {{form.content(class_="form-control",id="exampleContent", rows="10")}}
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </form>
+    </div>
+</div>
+
+{% endblock body %}

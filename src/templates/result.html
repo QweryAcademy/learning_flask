@@ -1,0 +1,28 @@
+{% extends "index.html" %} 
+{% block body %}
+<div class="parent-container">
+    <div class="search-result">
+        {% for data in results %}
+        <div class="g">
+            <div class="s">
+                <div class="_lip">
+                    <h3 class="r">
+                        <div class="_ksh">
+                            <g-link><a href="{{data.url}}" onmousedown="return rwt(this,'','','','9','AFQjCNF1XVRd1Fp8DascYbTPC4rmMP_f0Q','m5UK0XTtEJl_y29qNwPggA','0ahUKEwjh54ihl4TUAhWBrRoKHXxrClcQ6F4IPTAI','','',event)"
+                                    data-href="https://twitter.com/googledrive?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">{{data.title}}| {{data.counter.counter}}</a></g-link>
+                        </div>
+                    </h3>
+                    <div class="_Jsh _Qxh"><cite class="ellip _Sxh _Rm">{{data.url}}</cite><span class="_Rxh"><span class="_BOf _ayh"></span></span>
+                    </div>
+                </div>
+                {{data.content | safe}}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="right-content">
+        You searched for {{search_param}}
+    </div>
+
+</div>
+{% endblock body %}
